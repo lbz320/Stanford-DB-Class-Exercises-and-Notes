@@ -1,0 +1,6 @@
+SELECT DISTINCT name
+FROM Reviewer
+UNION
+SELECT DISTINCT title
+FROM Movie
+ORDER BY name ASC

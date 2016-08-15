@@ -1,0 +1,7 @@
+SELECT h.name, h.grade
+FROM Highschooler h,
+(SELECT ID2
+FROM Likes
+GROUP BY ID2
+HAVING COUNT(ID2)>1) AS IDS
+WHERE h.ID = IDS.ID2
